@@ -13,12 +13,12 @@ defmodule SampleRandomTest do
     end
   end
 
-  defp rand64() do
-    :rand.uniform(Bitwise.bsl(1, 64))
+  defp rand16() do
+    :rand.uniform(Bitwise.bsl(1, 16))
   end
 
   defp singular_value() do
     :rand.seed(:exs1024s, {52, 259, 32})
-    {rand64(), rand64()}
+    {rand16(), rand16()}
   end
 end
