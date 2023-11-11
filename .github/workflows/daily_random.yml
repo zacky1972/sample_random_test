@@ -6,10 +6,9 @@
 name: Random test
 
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+  schedule:
+    # Daily perform random test at 9:00 JST (0:00 GMT)
+    - cron: "0 0 * * *"
 
 permissions:
   contents: read
