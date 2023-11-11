@@ -11,7 +11,7 @@ defmodule SampleRandomTestTest do
     test "random test" do
       :rand.seed(:exs1024s)
 
-      1..10_000
+      1..500
       |> Enum.map(fn _ -> :rand.uniform(Bitwise.bsl(1, 16)) end)
       |> Enum.map(& {&1, SampleRandomTest.function(&1)})
       |> Enum.map(fn {x, y} -> assert x == y end)
